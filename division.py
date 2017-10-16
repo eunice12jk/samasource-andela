@@ -1,6 +1,12 @@
 def divide(a,b):
   
-  return a / b
+  if type(a) == str:
+    return "Has to be an integer"
+  
+  try:
+    return a / b
     
- ''' except ZeroDivisionError:
-        print("Cannot divide by zero")'''
+  except ZeroDivisionError:
+    return "Cannot divide by 0"
+  
+  
